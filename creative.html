@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css?v=3" />
 <style>
 /* ============================================================
    Creative page · its own theme: warm moody "gallery at night"
@@ -129,6 +129,7 @@ a.witem{text-decoration:none;color:inherit}
       <a href="#writing" class="underline">Writing</a>
       <a href="index.html" class="nav-pill">&larr; The Professional Me</a>
     </div>
+    <button class="nav-burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -261,6 +262,6 @@ addEventListener('scroll',function(){
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 </script>
-<script src="polish.js"></script>
+<script src="polish.js?v=3"></script>
 </body>
 </html>
