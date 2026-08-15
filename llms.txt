@@ -1,0 +1,33 @@
+# Odiche Obiakarije — Data & AI Engineer
+
+> Portfolio of Odiche Obiakarije (Odi), a Data & AI Engineer and AI architect
+> with 5+ years building agentic AI, RAG systems, data-engineering pipelines,
+> and enterprise automation. The site has two sides — professional and personal.
+
+## Professional (https://odiobiak.github.io/website-me/)
+- Focus: Agentic AI, RAG, Data Engineering, Enterprise Automation, AI Architecture.
+- Experience: Data & AI Engineer at Accenture (Dec 2022–present) and Data Engineer
+  at Rekor Systems (Oct 2020–Nov 2022).
+- Case studies (each with an architecture diagram):
+  1. Agentic AI — Multi-Agent Rebate Q&A Assistant (LangChain orchestrator,
+     retrieval + evaluation agents, Pinecone, GPT-4o); ~60% faster Q&A.
+  2. Data Engineering — Real-Time Traffic Pipeline (Kafka → Airflow → PySpark →
+     Postgres warehouse → models & dashboards); 35% fewer errors, 60% less manual work.
+  3. Enterprise Automation — Metadata Quality Agents (rule checks + LLM judge,
+     structured outputs, human-in-the-loop); 40% fewer integration errors.
+- Toolkit: LangChain, LangGraph, RAG, MCP, Pinecone, Snowflake, Databricks, Kafka,
+  PySpark, Airflow, dbt, AWS, Azure, Docker, Kubernetes, Python, SQL, FastAPI.
+- Certifications: Snowflake SnowPro Core; Claude Architect (Foundations, Anthropic).
+- Education: B.S. Computer Science, University of Pittsburgh (2019).
+- Live AI assistant "Odi" answers questions about this work.
+
+## Personal / Creative — "The Personal Me" (https://odiobiak.github.io/website-me/creative.html)
+- A warmer, image-rich side: personal story, a photography and travel gallery
+  (Pittsburgh, New York, Singapore, seaside travels, life moments), interests
+  (music, travel, photography, reading, food & culture, building), and writing.
+- Writing on Medium: "Part 1: What Are RAG-Based Agents, and Why Do They Matter?"
+
+## Links
+- LinkedIn: https://www.linkedin.com/in/odicheobiak
+- GitHub: https://github.com/Odiobiak
+- Medium: https://medium.com/@odiobiak
