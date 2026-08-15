@@ -197,6 +197,35 @@ a.pcard{display:block;color:inherit;text-decoration:none}
 .cf-status.err{color:#c4502a}
 .cf-alt{text-align:center;font-size:12.5px;color:var(--faint);letter-spacing:.05em;margin:4px 0 12px}
 @media(max-width:560px){.cf-row{flex-direction:column;gap:12px}}
+
+/* hero pillars */
+.hero-pillars{display:flex;flex-wrap:wrap;gap:10px 20px;margin:-4px 0 28px;font-size:13.5px;color:var(--muted);letter-spacing:.02em}
+.hero-pillars span{position:relative;padding-left:16px}
+.hero-pillars span::before{content:"";position:absolute;left:0;top:50%;width:6px;height:6px;border-radius:50%;background:var(--gold);transform:translateY(-50%)}
+.about-resume{margin-top:26px}
+/* odi sample questions */
+.odi-samples{margin-top:24px}
+.odi-samples .sq-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:12px}
+.sq{display:flex;flex-wrap:wrap;gap:9px}
+.sq button{font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);background:var(--surface);border:1px solid var(--line-2);border-radius:999px;padding:9px 15px;cursor:pointer;transition:all .25s var(--ease)}
+.sq button:hover{color:var(--ink);border-color:var(--accent);transform:translateY(-2px)}
+.sq button.copied{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+/* experience proof */
+.tl-summary{color:var(--ink);font-size:15.5px;font-style:italic;margin-top:4px}
+.tl-list a.seecase{color:var(--accent);font-weight:600;white-space:nowrap;border-bottom:1px solid transparent;transition:border-color .25s}
+.tl-list a.seecase:hover{border-color:var(--accent)}
+/* case studies */
+.case{padding:36px 0;border-top:1px solid var(--line)}
+.case:first-of-type{border-top:0;padding-top:6px}
+.case-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.case-tag{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;border:1px solid var(--gold-soft);background:var(--gold-soft);padding:6px 12px;border-radius:999px}
+.case-top h3{font-size:clamp(21px,3vw,27px)}
+.case-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-bottom:26px}
+.case-cols h5{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.case-cols p{color:var(--muted);font-size:14.5px}
+.case-metrics{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.case-metrics span{font-size:12.5px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:7px 13px;font-weight:500}
+@media(max-width:820px){.case-cols{grid-template-columns:1fr;gap:16px}}
 </style>
 </head>
 <body>
@@ -209,8 +238,8 @@ a.pcard{display:block;color:inherit;text-decoration:none}
       <a href="#about" class="underline">About</a>
       <a href="#assistant" class="underline">Odi</a>
       <a href="#experience" class="underline">Experience</a>
+      <a href="#cases" class="underline">Case Studies</a>
       <a href="#toolkit" class="underline">Toolkit</a>
-      <a href="#workflow" class="underline">Work</a>
       <a href="creative.html" class="nav-pill">The Personal Me &rarr;</a>
     </div>
   </div>
@@ -223,6 +252,7 @@ a.pcard{display:block;color:inherit;text-decoration:none}
   <div class="wrap hero-in">
     <span class="label">Data &amp; AI Engineer</span>
     <h1>Building <em>intelligent systems</em>.</h1>
+    <div class="hero-pillars"><span>Agentic AI</span><span>RAG</span><span>Data Engineering</span><span>Enterprise Automation</span></div>
     <p class="hero-lede">I design agentic AI and data engineering systems end-to-end, turning complex enterprise data into automated, measurable outcomes.</p>
     <div class="terminal" id="term" aria-hidden="true">
       <div class="term-bar"><span class="tdot"></span><span class="tdot"></span><span class="tdot"></span><span class="tname">odi:~/portfolio</span></div>
@@ -232,8 +262,8 @@ a.pcard{display:block;color:inherit;text-decoration:none}
       </div>
     </div>
     <div class="hero-cta">
-      <a href="#contact" class="btn btn-primary">Contact me <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a href="assets/Odiche_Obiakarije_Resume.pdf" download class="btn btn-ghost"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Download r&eacute;sum&eacute;</a>
+      <a href="#assistant" class="btn btn-primary">Talk to Odi <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="#cases" class="btn btn-ghost">View case studies</a>
     </div>
   </div>
 </header>
@@ -244,12 +274,13 @@ a.pcard{display:block;color:inherit;text-decoration:none}
     <div class="about-grid">
       <div class="reveal">
         <span class="label" style="margin-bottom:24px">01 · Profile</span>
-        <p class="about-lead">A <b>Data &amp; AI Engineer</b> with 5+ years turning tangled business processes into intelligent systems that ship, from ETL/ELT pipelines to <b>multi-agent RAG</b>.</p>
-        <p class="about-sub">My focus is agentic AI, RAG, and LangChain / LangGraph orchestration, backed by solid data engineering foundations.</p>
+        <p class="about-lead">A <b>Data &amp; AI Engineer</b> and <b>AI architect</b> with 5+ years turning tangled enterprise processes into intelligent systems that ship, from ETL/ELT pipelines to <b>multi-agent RAG</b>.</p>
+        <p class="about-sub">I design <b>agentic AI</b>, <b>RAG</b>, and <b>enterprise-automation</b> systems, LangChain / LangGraph orchestration on solid data-engineering foundations, with an architect's eye for reliability and measurable outcomes.</p>
+        <a href="assets/Odiche_Obiakarije_Resume.pdf" download class="btn btn-ghost about-resume"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Download r&eacute;sum&eacute;</a>
       </div>
       <div class="reveal d1">
         <div class="facts">
-          <div class="fact"><span class="k">Focus</span><span class="v">Agentic AI · Data Eng</span></div>
+          <div class="fact"><span class="k">Focus</span><span class="v">AI Architecture · Agentic AI</span></div>
           <div class="fact"><span class="k">Certified</span><span class="v">SnowPro · Claude Architect</span></div>
           <div class="fact"><span class="k">Education</span><span class="v">B.S. CS, Pittsburgh</span></div>
           <div class="fact"><span class="k">Status</span><span class="v ok">Open to opportunities</span></div>
@@ -279,6 +310,15 @@ a.pcard{display:block;color:inherit;text-decoration:none}
           <li>Built on the same agentic patterns I ship professionally</li>
           <li>Tool-use, structured outputs, and guardrails</li>
         </ul>
+        <div class="odi-samples">
+          <div class="sq-label">Try asking Odi</div>
+          <div class="sq">
+            <button type="button" data-q="What's your experience with multi-agent RAG?">Experience with multi-agent RAG?</button>
+            <button type="button" data-q="How do you design AI architectures for the enterprise?">Designing enterprise AI architecture?</button>
+            <button type="button" data-q="Tell me about your data engineering pipelines.">Your data engineering pipelines?</button>
+            <button type="button" data-q="What measurable impact have you delivered?">Measurable impact delivered?</button>
+          </div>
+        </div>
       </div>
       <div class="chat">
         <div class="chat-head">
@@ -307,11 +347,11 @@ a.pcard{display:block;color:inherit;text-decoration:none}
           <div><span class="tl-role">Data &amp; AI Engineer</span> · <span class="tl-co">Accenture</span></div>
           <span class="tl-date">Dec 2022 – Present · Remote</span>
         </div>
+        <div class="tl-summary">Design and delivery of agentic AI systems and enterprise data automation for enterprise clients.</div>
         <ul class="tl-list">
-          <li>Built a <b>multi-agent RAG solution</b> with OpenAI LLMs to automate rebate Q&amp;A workflows, improving client team efficiency by <b>~60%</b>.</li>
-          <li>Engineered task-specific AI agents with prompt engineering, <b>tool/function calling</b>, and structured outputs to evaluate enterprise metadata quality at scale.</li>
-          <li>Integrated LLM agents with <b>Streamlit</b> and <b>Pinecone</b> for hybrid search over structured and unstructured data.</li>
-          <li>Reduced data integration errors by <b>40%</b> through automated data-quality pipelines, with workflow guardrails, retries and checkpointing.</li>
+          <li>Architected a <b>multi-agent RAG assistant</b> (LangChain orchestrator, retrieval + evaluation agents, Pinecone, GPT-4o) that cut rebate Q&amp;A time by <b>~60%</b>. <a class="seecase" href="#case-rag">See the architecture &rarr;</a></li>
+          <li>Built task-specific <b>evaluation agents</b> with tool-calling and structured outputs that scored enterprise metadata quality, cutting integration errors by <b>40%</b>. <a class="seecase" href="#case-automation">See the workflow &rarr;</a></li>
+          <li>Hardened every workflow with <b>guardrails, retries, and checkpointing</b> so the systems held up in production.</li>
         </ul>
       </div>
       <div class="tl-item reveal d1">
@@ -320,11 +360,11 @@ a.pcard{display:block;color:inherit;text-decoration:none}
           <div><span class="tl-role">Data Engineer</span> · <span class="tl-co">Rekor Systems</span></div>
           <span class="tl-date">Oct 2020 – Nov 2022 · Remote</span>
         </div>
+        <div class="tl-summary">Built the real-time data platform behind risk analytics and operational dashboards.</div>
         <ul class="tl-list">
-          <li>Designed end-to-end <b>ETL pipelines</b> for real-time traffic data using Python, <b>Airflow</b>, and <b>Kafka</b>.</li>
-          <li>Built and fine-tuned Python analytical models supporting risk analysis and operational dashboards.</li>
-          <li>Implemented data validation &amp; quality checks, reducing downstream errors by <b>35%</b>.</li>
-          <li>Led ingestion across environments, cutting manual processing time by <b>60%</b> and ensuring data consistency.</li>
+          <li>Engineered a <b>streaming ETL pipeline</b> (Kafka &rarr; Airflow &rarr; validation &rarr; models) for real-time traffic data. <a class="seecase" href="#case-pipeline">See the pipeline &rarr;</a></li>
+          <li>Added validation and quality checks that reduced downstream errors <b>35%</b> and cut manual processing <b>60%</b>.</li>
+          <li>Standardized ingestion across Prod/Stage/Dev for consistent, reliable data movement.</li>
         </ul>
       </div>
     </div>
@@ -333,41 +373,29 @@ a.pcard{display:block;color:inherit;text-decoration:none}
 
 <div class="divider"></div>
 
-<!-- TOOLKIT -->
-<section id="toolkit">
+<!-- CASE STUDIES -->
+<section id="cases">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="label">04 · Toolkit</span>
-      <h2>The tools I build with.</h2>
-      <p>One discipline at a time: tap a tab to explore the stack.</p>
+      <span class="label">04 · Case Studies</span>
+      <h2>Case studies in production.</h2>
+      <p>Three systems I designed and shipped end-to-end, with the architecture behind each. Agentic AI, data engineering, and enterprise automation.</p>
     </div>
-    <div class="filterbar reveal" id="filterbar"></div>
-    <div class="skills-cloud reveal d1" id="cloud"></div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- WORKFLOW / PROJECTS & KNOWLEDGE -->
-<section id="workflow">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="label">05 · Projects &amp; Knowledge</span>
-      <h2>Agentic workflow design.</h2>
-      <p>How I architect production agent systems, sketched from a real production build, alongside other things I've shipped.</p>
+  <article class="case reveal" id="case-rag">
+    <div class="case-top"><span class="case-tag">Agentic AI</span><h3>Multi-Agent Rebate Q&amp;A Assistant</h3></div>
+    <div class="case-cols">
+      <div><h5>Problem</h5><p>Client teams spent hours answering rebate questions from scattered, inconsistent enterprise data.</p></div>
+      <div><h5>Approach</h5><p>A multi-agent RAG system: a LangChain orchestrator routes to a retrieval agent (hybrid search over Pinecone), a metadata-quality evaluation agent, and a GPT-4o answer agent, wrapped in guardrails, retries, and checkpointing behind a Streamlit UI.</p></div>
+      <div><h5>Impact</h5><p>Rebate Q&amp;A that used to take hours became near-instant, with structured, auditable answers evaluated at scale.</p><div class="case-metrics"><span>~60% faster Q&amp;A</span><span>Auditable answers</span><span>Evaluated at scale</span></div></div>
     </div>
-    <div class="wf-caption reveal">Rebate Q&amp;A Assistant · multi-agent RAG in production</div>
-    <div class="arch-wrap reveal">
-      <svg class="arch" viewBox="0 0 960 380" role="img" aria-label="Rebate Q&A multi-agent RAG architecture">
+    <div class="arch-wrap">
+      <svg class="arch" viewBox="0 0 960 380" role="img" aria-label="Multi-agent RAG architecture">
         <rect class="bound" x="398" y="34" width="422" height="316" rx="18"/>
         <rect x="470" y="26" width="278" height="18" fill="var(--bg)"/>
         <text class="blabel" x="609" y="39" text-anchor="middle">GUARDRAILS · RETRIES · CHECKPOINTING</text>
-        <path class="flow" d="M144,189 H196"/>
-        <path class="flow" d="M346,172 C384,150 384,96 420,90"/>
-        <path class="flow" d="M346,208 C384,232 384,288 420,294"/>
-        <path class="flow" d="M574,88 H640"/>
-        <path class="flow" d="M719,119 C719,138 726,138 726,150"/>
-        <path class="flow" d="M574,294 C614,286 642,240 658,224"/>
+        <path class="flow" d="M144,189 H196"/><path class="flow" d="M346,172 C384,150 384,96 420,90"/>
+        <path class="flow" d="M346,208 C384,232 384,288 420,294"/><path class="flow" d="M574,88 H640"/>
+        <path class="flow" d="M719,119 C719,138 726,138 726,150"/><path class="flow" d="M574,294 C614,286 642,240 658,224"/>
         <path class="flow" d="M802,190 H852"/>
         <circle class="pkt" r="4"><animateMotion dur="3.4s" repeatCount="indefinite" path="M78,189 H900"/></circle>
         <circle class="pkt2" r="3"><animateMotion dur="3.4s" begin="1.7s" repeatCount="indefinite" path="M78,189 H900"/></circle>
@@ -380,29 +408,82 @@ a.pcard{display:block;color:inherit;text-decoration:none}
         <g><rect class="nodebox" x="852" y="155" width="96" height="68" rx="12"/><text class="nlabel" x="900" y="184" text-anchor="middle">Rebate</text><text class="nsub" x="900" y="202" text-anchor="middle">answer</text></g>
       </svg>
     </div>
-    <div class="arch-legend reveal">
+  </article>
+  <article class="case reveal" id="case-pipeline">
+    <div class="case-top"><span class="case-tag">Data Engineering</span><h3>Real-Time Traffic Data Pipeline</h3></div>
+    <div class="case-cols">
+      <div><h5>Problem</h5><p>Real-time traffic data had to feed risk models and dashboards reliably, consistently across environments.</p></div>
+      <div><h5>Approach</h5><p>A streaming ETL pipeline: Kafka ingests events, Airflow orchestrates, PySpark validates and cleans, and a Postgres warehouse serves risk models and dashboards, promoted across Prod/Stage/Dev.</p></div>
+      <div><h5>Impact</h5><p>A dependable real-time platform with far fewer errors and dramatically less manual handling.</p><div class="case-metrics"><span>35% fewer errors</span><span>60% less manual work</span><span>Real-time throughput</span></div></div>
+    </div>
+    <div class="arch-wrap">
+      <svg class="arch" viewBox="0 0 1040 300" role="img" aria-label="Real-time data pipeline architecture">
+        <rect class="bound" x="506" y="96" width="342" height="108" rx="16"/>
+        <rect x="560" y="88" width="234" height="16" fill="var(--bg)"/>
+        <text class="blabel" x="677" y="101" text-anchor="middle">VALIDATION · QUALITY CHECKS</text>
+        <path class="flow" d="M142,150 H172"/><path class="flow" d="M310,150 H340"/><path class="flow" d="M486,150 H516"/>
+        <path class="flow" d="M662,150 H692"/>
+        <path class="flow" d="M838,138 C858,120 862,110 872,106"/><path class="flow" d="M838,162 C858,182 862,192 872,194"/>
+        <circle class="pkt" r="4"><animateMotion dur="3.6s" repeatCount="indefinite" path="M77,150 H1028"/></circle>
+        <circle class="pkt2" r="3"><animateMotion dur="3.6s" begin="1.8s" repeatCount="indefinite" path="M77,150 H1028"/></circle>
+        <g><rect class="nodebox" x="12" y="118" width="130" height="64" rx="12"/><text class="nlabel" x="77" y="146" text-anchor="middle">Sources</text><text class="nsub" x="77" y="164" text-anchor="middle">traffic data</text></g>
+        <g><rect class="nodebox pulse" x="172" y="118" width="138" height="64" rx="12"/><text class="nlabel" x="241" y="146" text-anchor="middle">Apache Kafka</text><text class="nsub" x="241" y="164" text-anchor="middle">stream ingest</text></g>
+        <g><rect class="nodebox" x="340" y="110" width="146" height="80" rx="14"/><text class="nlabel" x="413" y="146" text-anchor="middle">Airflow</text><text class="nsub" x="413" y="164" text-anchor="middle">orchestration</text></g>
+        <g><rect class="nodebox" x="516" y="118" width="146" height="64" rx="12"/><text class="nlabel" x="589" y="146" text-anchor="middle">PySpark</text><text class="nsub" x="589" y="164" text-anchor="middle">validate + clean</text></g>
+        <g><rect class="nodebox pulse" x="692" y="110" width="146" height="80" rx="14"/><text class="nlabel" x="765" y="146" text-anchor="middle">Warehouse</text><text class="nsub" x="765" y="164" text-anchor="middle">Postgres</text></g>
+        <g><rect class="nodebox" x="872" y="78" width="156" height="56" rx="12"/><text class="nlabel" x="950" y="111" text-anchor="middle">Risk Models</text></g>
+        <g><rect class="nodebox" x="872" y="166" width="156" height="56" rx="12"/><text class="nlabel" x="950" y="199" text-anchor="middle">Dashboards</text></g>
+      </svg>
+    </div>
+  </article>
+  <article class="case reveal" id="case-automation">
+    <div class="case-top"><span class="case-tag">Enterprise Automation</span><h3>Metadata Quality Agents</h3></div>
+    <div class="case-cols">
+      <div><h5>Problem</h5><p>Inconsistent enterprise metadata caused integration errors and a heavy manual review load.</p></div>
+      <div><h5>Approach</h5><p>Task-specific evaluation agents (tool/function calling + structured outputs) score metadata against rule checks and an LLM judge; high-confidence records publish to the catalog while low-confidence ones route to human review. Automated across environments.</p></div>
+      <div><h5>Impact</h5><p>Cleaner, catalog-ready metadata with humans kept in the loop only where it counts.</p><div class="case-metrics"><span>40% fewer integration errors</span><span>Human-in-the-loop</span><span>Catalog-ready</span></div></div>
+    </div>
+    <div class="arch-wrap">
+      <svg class="arch" viewBox="0 0 860 300" role="img" aria-label="Metadata quality automation workflow">
+        <rect class="bound" x="302" y="64" width="170" height="170" rx="16"/>
+        <rect x="322" y="56" width="150" height="16" fill="var(--bg)"/>
+        <text class="blabel" x="387" y="69" text-anchor="middle">EVALUATION AGENTS</text>
+        <path class="flow" d="M136,150 H166"/>
+        <path class="flow" d="M282,138 C298,118 300,102 312,101"/><path class="flow" d="M282,162 C298,182 300,196 312,195"/>
+        <path class="flow" d="M462,104 C482,120 486,138 492,146"/><path class="flow" d="M462,195 C482,180 486,162 492,154"/>
+        <path class="flow" d="M626,138 C644,118 648,104 656,103"/><path class="flow" d="M626,162 C644,182 648,196 656,193"/>
+        <circle class="pkt" r="4"><animateMotion dur="3.5s" repeatCount="indefinite" path="M74,150 H806"/></circle>
+        <circle class="pkt2" r="3"><animateMotion dur="3.5s" begin="1.75s" repeatCount="indefinite" path="M74,150 H806"/></circle>
+        <g><rect class="nodebox" x="12" y="120" width="124" height="60" rx="12"/><text class="nlabel" x="74" y="146" text-anchor="middle">Metadata</text><text class="nsub" x="74" y="164" text-anchor="middle">records</text></g>
+        <g><rect class="nodebox" x="166" y="120" width="116" height="60" rx="12"/><text class="nlabel" x="224" y="155" text-anchor="middle">Ingestion</text></g>
+        <g><rect class="nodebox" x="312" y="74" width="150" height="54" rx="12"/><text class="nlabel" x="387" y="106" text-anchor="middle">Rule Checks</text></g>
+        <g><rect class="nodebox" x="312" y="168" width="150" height="54" rx="12"/><text class="nlabel" x="387" y="192" text-anchor="middle">LLM Judge</text><text class="nsub" x="387" y="209" text-anchor="middle">structured output</text></g>
+        <g><rect class="nodebox pulse" x="492" y="120" width="134" height="60" rx="12"/><text class="nlabel" x="559" y="146" text-anchor="middle">Quality Score</text><text class="nsub" x="559" y="164" text-anchor="middle">0&#8211;100</text></g>
+        <g><rect class="nodebox" x="656" y="76" width="150" height="54" rx="12"/><text class="nlabel" x="731" y="101" text-anchor="middle">Data Catalog</text><text class="nsub" x="731" y="117" text-anchor="middle">publish</text></g>
+        <g><rect class="nodebox" x="656" y="168" width="150" height="54" rx="12"/><text class="nlabel" x="731" y="192" text-anchor="middle">Human Review</text><text class="nsub" x="731" y="209" text-anchor="middle">in the loop</text></g>
+      </svg>
+    </div>
+  </article>
+    <div class="arch-legend reveal" style="margin-top:30px">
       <span><i style="background:var(--accent)"></i> Data flow</span>
       <span><i style="background:var(--gold)"></i> Guardrails &amp; eval</span>
       <span><i style="background:var(--surface);border:1px solid var(--line-2)"></i> Agent / service</span>
     </div>
-    <h3 class="wf-sub reveal">Other builds</h3>
-    <div class="proj-more proj-3 reveal">
-      <div class="pcard">
-        <div class="pk">Real-time · Rekor Systems</div>
-        <h4>Traffic Data Pipeline</h4>
-        <p>End-to-end streaming ETL with Kafka &amp; Airflow feeding risk models and dashboards, with 35% fewer downstream errors.</p>
-      </div>
-      <div class="pcard">
-        <div class="pk">Enterprise · Data &amp; AI</div>
-        <h4>Metadata Quality Automation</h4>
-        <p>Task-specific evaluation agents scoring enterprise metadata with structured outputs, with 40% fewer integration errors.</p>
-      </div>
-      <a class="pcard" href="#assistant">
-        <div class="pk">Personal · Live</div>
-        <h4>Odi · AI Agent</h4>
-        <p>A retrieval-grounded assistant that answers questions about my work, deployed on Hugging Face. Try it above &uarr;</p>
-      </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TOOLKIT -->
+<section id="toolkit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">05 · Toolkit</span>
+      <h2>The tools I build with.</h2>
+      <p>One discipline at a time: tap a tab to explore the stack.</p>
     </div>
+    <div class="filterbar reveal" id="filterbar"></div>
+    <div class="skills-cloud reveal d1" id="cloud"></div>
   </div>
 </section>
 
@@ -437,7 +518,7 @@ a.pcard{display:block;color:inherit;text-decoration:none}
   <div class="wrap reveal">
     <span class="label center" style="margin-bottom:22px">07 · Contact</span>
     <h2>Get in touch.</h2>
-    <p class="sub">Open to Data &amp; AI Engineering roles and collaborations; the fastest way to reach me is email.</p>
+    <p class="sub">Open to Data &amp; AI Engineering and AI architecture roles and collaborations. Send a message and I will get back to you.</p>
     <form class="contact-form reveal" id="cform" action="https://formsubmit.co/ajax/odicheobiakarije@gmail.com" method="POST">
       <div class="cf-row">
         <input class="cf-input" type="text" name="name" placeholder="Your name" required autocomplete="name" />
@@ -450,10 +531,7 @@ a.pcard{display:block;color:inherit;text-decoration:none}
       <button class="btn btn-primary cf-btn" type="submit">Send message <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
       <div class="cf-status" id="cstatus" aria-live="polite"></div>
     </form>
-    <div class="cf-alt">or reach me directly</div>
-    <a class="contact-email" href="mailto:odicheobiakarije@gmail.com">odicheobiakarije@gmail.com</a>
     <div class="contact-links">
-      <a class="cl" href="tel:+17173436901"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg> +1 717-343-6901</a>
       <a class="cl" href="https://www.linkedin.com/in/odicheobiak" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 014 0v4"/></svg> LinkedIn</a>
       <a class="cl" href="https://github.com/Odiobiak" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 00-1-2.6c3-.3 6-1.5 6-6.6a5.1 5.1 0 00-1.4-3.5 4.8 4.8 0 00-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 00-6.6 0C6.7 1.1 5.6 1.4 5.6 1.4a4.8 4.8 0 00-.1 3.5A5.1 5.1 0 004 8.4c0 5 3 6.3 6 6.6a3.4 3.4 0 00-1 2.6V22"/></svg> GitHub</a>
     </div>
@@ -533,6 +611,14 @@ cats.forEach(function(cat){CATS[cat].items.forEach(function(it){var s=document.c
   s.innerHTML='<span class="dot" style="background:'+CATS[cat].c+'"></span>'+it;cloud.appendChild(s);});});
 function filter(cat){document.querySelectorAll('.skill').forEach(function(s){s.style.display=(s.dataset.cat===cat)?'':'none';});cloud.style.animation='none';void cloud.offsetHeight;cloud.style.animation='fadeCloud .45s var(--ease)';}
 filter(cats[0]);
+/* Odi sample questions: copy to clipboard */
+document.querySelectorAll('.sq button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var q=btn.dataset.q||btn.textContent;
+    var done=function(){var old=btn.textContent;btn.classList.add('copied');btn.textContent='Copied \u2713';setTimeout(function(){btn.classList.remove('copied');btn.textContent=old;},1500);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(q).then(done).catch(done);}else{done();}
+  });
+});
 </script>
 <script src="polish.js"></script>
 </body>
