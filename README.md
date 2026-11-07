@@ -1,8 +1,8 @@
 # Odiche Obiakarije — Portfolio
 
-A two-page personal portfolio for Odiche Obiakarije, Data & AI Engineer.
+A two-page personal portfolio for Odiche Obiakarije, Forward Deployed Engineer (Enterprise AI).
 
-- **`index.html`** — the professional side: profile, live "Odi" AI assistant, experience, toolkit, an agentic-workflow architecture diagram, projects, and a contact form.
+- **`index.html`**: the professional side. A compact hero and proof strip, then one tabbed workspace (Experience, Case studies, Toolkit, Writing, Ask Odi) and a contact card. Tabs and case studies are deep-linkable (`#cases`, `#case-pap`, `#role-nice`).
 - **`creative.html`** — *The Personal Me*: story, photo gallery, interests, and writing.
 
 Built as static HTML/CSS/JS (no build step). Fonts via Google Fonts; contact form via Formsubmit. Deployed with GitHub Pages.

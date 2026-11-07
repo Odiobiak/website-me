@@ -1,39 +1,47 @@
-# Odiche Obiakarije — Data & AI Engineer
+# Odiche Obiakarije: Forward Deployed Engineer, Enterprise AI
 
-> Portfolio of Odiche Obiakarije (Odi), a Data & AI Engineer and AI architect
-> with 5+ years building agentic AI, RAG systems, data-engineering pipelines,
-> and enterprise automation. The site has two sides — professional and personal.
+> Portfolio of Odiche Obiakarije (Odi), a Forward Deployed Engineer at NICE (Cognigy)
+> who embeds with enterprise teams to design, build and hand over conversational and
+> agentic AI, on 5+ years of data engineering, RAG and multi-agent work.
+> The site has two sides: professional and personal.
 
 ## Professional (https://odiobiak.github.io/website-me/)
-- Focus: Agentic AI, RAG, Data Engineering, Enterprise Automation, AI Architecture.
-- Experience: Data & AI Engineer at Accenture (Dec 2022–present) and Data Engineer
-  at Rekor Systems (Oct 2020–Nov 2022).
-- Case studies (each with an architecture diagram):
-  1. Agentic AI — Multi-Agent Rebate Q&A Assistant (LangChain orchestrator,
-     retrieval + evaluation agents, Pinecone, GPT-4o); ~60% faster Q&A.
-  2. Data Engineering — Real-Time Traffic Pipeline (Kafka → Airflow → PySpark →
-     Postgres warehouse → models & dashboards); 35% fewer errors, 60% less manual work.
-  3. Enterprise Automation — Metadata Quality Agents (rule checks + LLM judge,
-     structured outputs, human-in-the-loop); 40% fewer integration errors.
-  4. Prototype, AI Agent Trust: Personal AI Agents over the Personal Agent Protocol
-     (PAP 0.2). Built both sides: a GPT-4.1 personal assistant with its own signing
-     key, and a fictional insurer's front door that verifies it (signed assertions,
-     DPoP key-bound tokens, replay protection), signs the customer in by device code
-     with per-scope consent, and routes to an AI agent on NiCE Cognigy by conversation
-     or MCP tools behind the same quote rules. One customer sentence produced a full
-     auto quote; impostors and stolen tokens refused; 58 spec checks, 0 failures.
-- Toolkit: LangChain, LangGraph, RAG, MCP, OAuth/DPoP, Pinecone, Snowflake, Databricks, Kafka,
-  PySpark, Airflow, dbt, AWS, Azure, Docker, Kubernetes, Python, SQL, FastAPI.
+- Experience:
+  - Forward Deployed Engineer, NICE (Cognigy), Jul 2026 to present. Lead engineer on a
+    multimodal AI agent for new auto insurance quotes at a Fortune 500 insurer, built as
+    the reference architecture for its production build: hybrid LLM + code architecture,
+    chat-to-voice switching with no lost context, document intelligence (up to 30 of 37
+    answers from one upload), 750+ regression checks, 33 simulated personas, voice quote
+    cut from 49 to 36 turns. Also a personal AI agent prototype over the Personal Agent
+    Protocol, and a root-cause investigation into empty LLM responses in a live voice agent.
+  - Data & AI Engineer, Accenture, Dec 2020 to 2026. Multi-agent RAG assistant (~60%
+    faster Q&A), metadata evaluation agents (40% fewer integration errors), streaming ETL
+    for real-time traffic data (35% fewer errors, 60% less manual work).
+- Case studies (each with an architecture diagram), deep-linkable as #case-<id>:
+  1. case-quote: Multimodal AI Agent for Auto Insurance Quotes (NICE Cognigy, GPT-4.1,
+     Webchat and WebRTC voice, document vision, versioned rules layer of 79 fields).
+  2. case-pap: Personal AI Agents over the Personal Agent Protocol (PAP 0.2), a prototype:
+     signed assertions, DPoP key-bound tokens, device sign-in with per-scope consent, a
+     conversation route and an MCP tools route; impostors and stolen tokens refused;
+     58 spec checks, 0 failures.
+  3. case-rag: Multi-Agent Rebate Q&A Assistant (LangChain, Pinecone, GPT-4o).
+  4. case-automation: Metadata Quality Agents (rule checks + LLM judge, human review).
+  5. case-pipeline: Real-Time Traffic Data Pipeline (Kafka, Airflow, PySpark, Postgres).
+- Toolkit: Cognigy.AI, Voice Gateway, WebRTC, MCP, A2A, Personal Agent Protocol,
+  LangChain, LangGraph, RAG, OpenAI, Claude, Gemini, Snowflake, Databricks, Kafka,
+  PySpark, Airflow, dbt, AWS, Azure, OAuth 2.0, DPoP, Python, SQL, JavaScript,
+  TypeScript, Node.js.
 - Certifications: Snowflake SnowPro Core; Claude Architect (Foundations, Anthropic).
 - Education: B.S. Computer Science, University of Pittsburgh (2019).
 - Live AI assistant "Odi" answers questions about this work.
 
-## Personal / Creative — "The Personal Me" (https://odiobiak.github.io/website-me/creative.html)
-- A warmer, image-rich side: personal story, a photography and travel gallery
-  (Pittsburgh, New York, Singapore, seaside travels, life moments), interests
-  (music, travel, photography, reading, food & culture, building), and writing.
-- Writing on Medium: "Part 1: What Are RAG-Based Agents, and Why Do They Matter?", and a
-  three-part series on building for personal AI agents (the PAP prototype).
+## Personal / Creative: "The Personal Me" (https://odiobiak.github.io/website-me/creative.html)
+- A warmer, image-rich side: personal story, a photography and travel gallery, interests
+  (music, travel, photography, reading, food and culture, building), and writing.
+
+## Writing (https://medium.com/@odiobiak)
+- "Building for Personal AI Agents", a three-part series on the PAP prototype.
+- "Part 1: What Are RAG-Based Agents, and Why Do They Matter?"
 
 ## Links
 - LinkedIn: https://www.linkedin.com/in/odicheobiak
