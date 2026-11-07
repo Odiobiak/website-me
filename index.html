@@ -28,6 +28,7 @@ section{padding:0}
 .chip-now{display:inline-flex;align-items:center;gap:9px;font-size:13px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 14px 7px 12px;box-shadow:var(--shadow-sm)}
 .chip-now i{flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(29,100,85,.5);animation:ping 2.4s infinite}
 .chip-now b{color:var(--ink);font-weight:600}
+.chip-now abbr{text-decoration:none}
 @keyframes ping{0%{box-shadow:0 0 0 0 rgba(29,100,85,.45)}70%{box-shadow:0 0 0 9px rgba(29,100,85,0)}100%{box-shadow:0 0 0 0 rgba(29,100,85,0)}}
 .nav-links .nav-cta{padding:9px 18px;border-radius:999px;background:var(--accent);color:#fdfcf9!important}
 .nav-links .nav-cta:hover{background:var(--accent-2)}
@@ -294,7 +295,7 @@ a.stat{color:inherit;text-decoration:none;transition:opacity .25s}a.stat:hover .
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <span class="chip-now"><i></i><span>Now: <b>Forward Deployed Engineer</b> at NICE Cognigy</span></span>
+        <span class="chip-now"><i></i><span>Now: <b><abbr title="Forward Deployed Engineer">FDE</abbr></b></span></span>
         <h1>I architect and build <em>data &amp; AI</em> solutions that ship.</h1>
         <p class="hero-lede">I embed with enterprise teams to design, build and integrate <b>CX and agentic AI</b> from first prototype to production, on <b>5+ years</b> of data platforms, RAG and generative AI work.</p>
         <div class="hero-cta">
@@ -356,7 +357,7 @@ a.stat{color:inherit;text-decoration:none;transition:opacity .25s}a.stat:hover .
             <div class="role-top"><h3>Forward Deployed Engineer · <span>NICE Cognigy</span></h3><span class="role-date">Jul 2026 – Present</span></div>
             <p class="role-sum">Embedded with enterprise customers to take conversational AI from first prototype to the template their production teams build on.</p>
             <ul class="bullets">
-              <li><b>Lead engineer on a multimodal AI agent</b> for new auto insurance quotes at a Fortune 500 insurer, built as the reference architecture for its production build. <a href="#case-quote">Case study &rarr;</a></li>
+              <li><b>Lead engineer on a multimodal AI agent</b> for new auto insurance quotes at a Fortune 500 insurer, built as the main architecture for its production build. <a href="#case-quote">Case study &rarr;</a></li>
               <li><b>Hybrid architecture:</b> the LLM handles understanding and rapport; code handles validation, guardrails and routing, so behavior stays testable across model changes.</li>
               <li><b>Quote intake cut from about 12 minutes to 6–7</b> versus the web form, with chat-to-voice switching and <b>document intelligence</b> that fills up to 30 of 37 answers from one upload.</li>
               <li><b>Testing practice:</b> 750+ regression checks and 33 simulated personas with AI-judge criteria; cut a full voice quote from 49 to 36 turns.</li>
@@ -663,7 +664,7 @@ addEventListener('scroll',function(){
 /* living terminal */
 (function(){
   var qs=[
-    {q:'whoami',a:'Forward Deployed Engineer, NICE Cognigy.\nI embed with enterprise teams and ship AI agents.'},
+    {q:'whoami',a:'Forward Deployed Engineer.\nI embed with enterprise teams and ship AI agents.'},
     {q:'what are you building?',a:'A multimodal insurance quote agent: chat, voice\nand documents in one conversation.'},
     {q:'stack?',a:'Cognigy · GPT-4.1 · LangGraph · MCP · Python ·\nNode.js · Snowflake · Kafka'},
     {q:'impact?',a:'Quote intake 12 → 6-7 min · ~60% faster Q&A ·\nimpostor AI agents blocked over PAP'}
