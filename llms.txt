@@ -15,7 +15,14 @@
      Postgres warehouse → models & dashboards); 35% fewer errors, 60% less manual work.
   3. Enterprise Automation — Metadata Quality Agents (rule checks + LLM judge,
      structured outputs, human-in-the-loop); 40% fewer integration errors.
-- Toolkit: LangChain, LangGraph, RAG, MCP, Pinecone, Snowflake, Databricks, Kafka,
+  4. Prototype, AI Agent Trust: Personal AI Agents over the Personal Agent Protocol
+     (PAP 0.2). Built both sides: a GPT-4.1 personal assistant with its own signing
+     key, and a fictional insurer's front door that verifies it (signed assertions,
+     DPoP key-bound tokens, replay protection), signs the customer in by device code
+     with per-scope consent, and routes to an AI agent on NiCE Cognigy by conversation
+     or MCP tools behind the same quote rules. One customer sentence produced a full
+     auto quote; impostors and stolen tokens refused; 58 spec checks, 0 failures.
+- Toolkit: LangChain, LangGraph, RAG, MCP, OAuth/DPoP, Pinecone, Snowflake, Databricks, Kafka,
   PySpark, Airflow, dbt, AWS, Azure, Docker, Kubernetes, Python, SQL, FastAPI.
 - Certifications: Snowflake SnowPro Core; Claude Architect (Foundations, Anthropic).
 - Education: B.S. Computer Science, University of Pittsburgh (2019).
@@ -25,7 +32,8 @@
 - A warmer, image-rich side: personal story, a photography and travel gallery
   (Pittsburgh, New York, Singapore, seaside travels, life moments), interests
   (music, travel, photography, reading, food & culture, building), and writing.
-- Writing on Medium: "Part 1: What Are RAG-Based Agents, and Why Do They Matter?"
+- Writing on Medium: "Part 1: What Are RAG-Based Agents, and Why Do They Matter?", and a
+  three-part series on building for personal AI agents (the PAP prototype).
 
 ## Links
 - LinkedIn: https://www.linkedin.com/in/odicheobiak
