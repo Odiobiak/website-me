@@ -9,7 +9,8 @@
 - Experience:
   - Forward Deployed Engineer, NICE (Cognigy), Jul 2026 to present. Lead engineer on a
     multimodal AI agent for new auto insurance quotes at a Fortune 500 insurer, built as
-    the reference architecture for its production build: hybrid LLM + code architecture,
+    the reference architecture for its production build: quote intake cut from about
+    12 minutes on the web form to 6-7 minutes; hybrid LLM + code architecture,
     chat-to-voice switching with no lost context, document intelligence (up to 30 of 37
     answers from one upload), 750+ regression checks, 33 simulated personas, voice quote
     cut from 49 to 36 turns. Also a personal AI agent prototype over the Personal Agent

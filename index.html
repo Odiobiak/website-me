@@ -67,7 +67,7 @@ section{padding:0}
 .yrs .path span:last-child{color:var(--accent);font-weight:600}.yrs abbr{text-decoration:none}
 .tile.impact{background:linear-gradient(135deg,var(--surface) 0%,var(--surface) 45%,rgba(29,100,85,.07) 100%);padding:18px 22px}
 .tk{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:12px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr)}
+.stats{display:grid;grid-template-columns:1.45fr 1fr 1fr}
 .stat{display:flex;flex-direction:column;padding:0 18px}
 .stat:first-child{padding-left:0}
 .stat+.stat{border-left:1px solid var(--line)}
@@ -75,6 +75,10 @@ section{padding:0}
 .stat .n{font-family:'Fraunces',serif;font-size:30px;line-height:1;color:var(--ink);letter-spacing:-.02em}
 .stat .n small{font-size:17px;color:var(--muted)}
 .stat .n .arr{font-family:'Inter',sans-serif;font-size:20px;color:var(--gold);margin:0 6px;vertical-align:4px}
+.stat.feat{position:relative}
+.stat.feat .n{color:var(--accent);white-space:nowrap}
+.stat.feat .n small{margin-left:3px;font-size:15px}
+.stat.feat .n .arr{margin:0 8px}
 a.stat{color:inherit;text-decoration:none;transition:opacity .25s}a.stat:hover .l{color:var(--ink)}a.stat:hover .c{text-decoration:underline}
 .stat .l{font-size:12px;color:var(--muted);margin-top:7px;line-height:1.45}
 .tile.creds{display:flex;flex-direction:column;justify-content:center;gap:7px}
@@ -245,7 +249,9 @@ a.stat{color:inherit;text-decoration:none;transition:opacity .25s}a.stat:hover .
   .stat+.stat{border-left:0;border-top:1px solid var(--line)}
   .stat:last-child{padding-bottom:2px}
   .stat .n{grid-row:1/3;grid-column:1;font-size:28px}
-  .stat .c{grid-column:2;margin:0}.stat .l{grid-column:2;margin-top:2px}}
+  .stat .c{grid-column:2;margin:0}.stat .l{grid-column:2;margin-top:2px}
+  .stat.feat{display:flex;flex-direction:column;align-items:flex-start;padding-top:4px}
+  .stat.feat .n{font-size:30px;margin:6px 0 2px;white-space:nowrap}}
 </style>
 <script type="application/ld+json">
 {
@@ -314,9 +320,9 @@ a.stat{color:inherit;text-decoration:none;transition:opacity .25s}a.stat:hover .
       <div class="tile impact">
         <div class="tk">Impact</div>
         <div class="stats">
+          <a class="stat feat" href="#case-quote"><span class="c">Insurance quote intake</span><span class="n">12<small>min</small><small class="arr">&rarr;</small>6&ndash;7<small>min</small></span><span class="l">from web form to an agentic CX build, about half the time</span></a>
           <a class="stat" href="#case-pap"><span class="c" title="Personal Agent Protocol">PAP prototype</span><span class="n">3<small>/3</small></span><span class="l">impostor AI agents blocked at the door</span></a>
           <div class="stat"><span class="c">Agentic AI</span><span class="n">~60%</span><span class="l">faster Q&amp;A with a multi-agent RAG assistant</span></div>
-          <div class="stat"><span class="c">Data quality</span><span class="n">40%</span><span class="l">fewer data integration errors</span></div>
         </div>
       </div>
       <div class="tile creds">
@@ -352,7 +358,7 @@ a.stat{color:inherit;text-decoration:none;transition:opacity .25s}a.stat:hover .
             <ul class="bullets">
               <li><b>Lead engineer on a multimodal AI agent</b> for new auto insurance quotes at a Fortune 500 insurer, built as the reference architecture for its production build. <a href="#case-quote">Case study &rarr;</a></li>
               <li><b>Hybrid architecture:</b> the LLM handles understanding and rapport; code handles validation, guardrails and routing, so behavior stays testable across model changes.</li>
-              <li><b>Chat to voice mid-conversation</b> with no lost context, and <b>document intelligence</b> that fills up to 30 of 37 answers from one upload.</li>
+              <li><b>Quote intake cut from about 12 minutes to 6–7</b> versus the web form, with chat-to-voice switching and <b>document intelligence</b> that fills up to 30 of 37 answers from one upload.</li>
               <li><b>Testing practice:</b> 750+ regression checks and 33 simulated personas with AI-judge criteria; cut a full voice quote from 49 to 36 turns.</li>
               <li><b>Personal AI agents:</b> prototyped how customers' AI assistants get quotes over the Personal Agent Protocol, with OAuth 2.0, DPoP and an MCP route. <a href="#case-pap">Case study &rarr;</a></li>
               <li><b>Production reliability:</b> root-caused intermittent empty LLM responses in a live voice agent with a reproduction harness and about 50 controlled trials.</li>
@@ -379,7 +385,7 @@ a.stat{color:inherit;text-decoration:none;transition:opacity .25s}a.stat:hover .
     <div class="panel" role="tabpanel" id="panel-cases" aria-labelledby="tab-cases" tabindex="0" hidden>
       <div class="md">
         <div class="picks" role="tablist" aria-label="Case studies" aria-orientation="vertical">
-          <button class="pick" role="tab" id="pick-case-quote" aria-controls="case-quote" aria-selected="true"><span class="k">Conversational AI</span><span class="t">Multimodal Insurance Quote Agent</span><span class="m">30 of 37 answers from one upload</span></button>
+          <button class="pick" role="tab" id="pick-case-quote" aria-controls="case-quote" aria-selected="true"><span class="k">Conversational AI</span><span class="t">Multimodal Insurance Quote Agent</span><span class="m">Quote intake: 12 → 6–7 min</span></button>
           <button class="pick" role="tab" id="pick-case-pap" aria-controls="case-pap" aria-selected="false" tabindex="-1"><span class="k">AI Agent Trust · Prototype</span><span class="t">Personal AI Agents over PAP</span><span class="m">3 of 3 impostors refused</span></button>
           <button class="pick" role="tab" id="pick-case-rag" aria-controls="case-rag" aria-selected="false" tabindex="-1"><span class="k">Agentic AI</span><span class="t">Multi-Agent Rebate Q&amp;A Assistant</span><span class="m">~60% faster Q&amp;A</span></button>
           <button class="pick" role="tab" id="pick-case-automation" aria-controls="case-automation" aria-selected="false" tabindex="-1"><span class="k">Enterprise Automation</span><span class="t">Metadata Quality Agents</span><span class="m">40% fewer integration errors</span></button>
@@ -391,7 +397,7 @@ a.stat{color:inherit;text-decoration:none;transition:opacity .25s}a.stat:hover .
             <div class="case-cols">
               <div><h5>Problem</h5><p>A Fortune 500 insurer wanted a new auto quote customers could start in chat, finish by voice and complete with a document instead of a form, built well enough to become its production template.</p></div>
               <div><h5>Approach</h5><p>A hybrid agent on NICE Cognigy with GPT-4.1: the model handles conversation, while a versioned rules layer (79 fields) handles validation, guardrails and routing. Chat and browser voice share one session; uploads are read by vision; prefill, VIN and rating plug in as subflows.</p></div>
-              <div><h5>Impact</h5><p>Customers answer only what's missing, switch channels freely, and the build ships with its own regression suite.</p><div class="case-metrics"><span>30 of 37 answers from one upload</span><span>Voice: 49 → 36 turns</span><span>750+ regression checks</span></div></div>
+              <div><h5>Impact</h5><p>Customers answer only what's missing, switch channels freely, and the build ships with its own regression suite.</p><div class="case-metrics"><span>Quote intake: 12 → 6–7 min</span><span>30 of 37 answers from one upload</span><span>750+ regression checks</span></div></div>
             </div>
             <div class="arch-wrap">
               <svg class="arch" viewBox="0 0 940 340" role="img" aria-label="Quote agent architecture: customer on chat or browser voice, an AI agent, a deterministic layer of rules and checks with document reading and integrations, then the quote and an advisor handoff">
@@ -660,7 +666,7 @@ addEventListener('scroll',function(){
     {q:'whoami',a:'Forward Deployed Engineer, NICE Cognigy.\nI embed with enterprise teams and ship AI agents.'},
     {q:'what are you building?',a:'A multimodal insurance quote agent: chat, voice\nand documents in one conversation.'},
     {q:'stack?',a:'Cognigy · GPT-4.1 · LangGraph · MCP · Python ·\nNode.js · Snowflake · Kafka'},
-    {q:'impact?',a:'30/37 answers from one upload · ~60% faster Q&A ·\n40% fewer data integration errors'}
+    {q:'impact?',a:'Quote intake 12 → 6-7 min · ~60% faster Q&A ·\nimpostor AI agents blocked over PAP'}
   ];
   var tq=document.getElementById('tq'),ta=document.getElementById('ta');if(!tq)return;
   if(matchMedia('(prefers-reduced-motion:reduce)').matches){tq.textContent=qs[0].q;ta.textContent=qs[0].a;return;}
